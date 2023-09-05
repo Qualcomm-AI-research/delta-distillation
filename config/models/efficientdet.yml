@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Qualcomm Technologies, Inc.
+
+# All Rights Reserved.
+model:
+  type: tf_efficientdet_d0

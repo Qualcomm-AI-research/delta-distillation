@@ -1,0 +1,48 @@
+# ------------------------------------------------------------------------------
+# Copyright (c) Microsoft
+# Licensed under the MIT License.
+# Written by Ke Sun (sunk@mail.ustc.edu.cn)
+#
+# This code is modified from https://github.com/HRNet/HRNet-Semantic-Segmentation
+# ------------------------------------------------------------------------------
+
+data:
+  source: /deltadist/datasets/cityscapes
+  num_classes: 19
+
+  TRAIN:
+    keyframe_distance: 5
+
+    IGNORE_LABEL: 255
+    IMAGE_SIZE:
+      - 1024
+      - 512
+    BASE_SIZE: 2048
+    FLIP: true
+    MULTI_SCALE: true
+    DOWNSAMPLERATE: 1
+    SCALE_FACTOR: 16
+    RANDOM_BRIGHTNESS: False
+    NUM_SAMPLES: null
+
+    batch_size: 5
+    shuffle: true
+
+  TEST:
+    keyframe_distance: 3
+
+    IGNORE_LABEL: 255
+    IMAGE_SIZE:
+      - 2048
+      - 1024
+    BASE_SIZE: 2048
+    FLIP: false
+    MULTI_SCALE: false
+    DOWNSAMPLERATE: 1
+    SCALE_FACTOR: 1
+    NUM_SAMPLES: 0
+
+    batch_size: 1
+    shuffle: false
+
+  num_workers: 8

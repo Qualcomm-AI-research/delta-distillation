@@ -1,0 +1,13 @@
+# Copyright (c) 2023 Qualcomm Technologies, Inc.
+
+# All Rights Reserved.
+checkpoint:
+  init: ~
+
+local_rank: -1
+cuda_devices: [0]
+
+test:
+  pred_align_corners: False
+
+stage: "test"

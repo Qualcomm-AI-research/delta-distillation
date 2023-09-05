@@ -1,0 +1,36 @@
+# ------------------------------------------------------------------------------
+# Copyright (c) Microsoft
+# Licensed under the MIT License.
+# Written by Ke Sun (sunk@mail.ustc.edu.cn)
+#
+# This code is modified from https://github.com/HRNet/HRNet-Semantic-Segmentation
+# ------------------------------------------------------------------------------
+log:
+  dir: log/train/segmentation
+  frequency:
+    iteration: 100
+
+checkpoint:
+  init: ~
+  mac: ~
+
+train:
+  optim:
+    lr: 0.001
+    lr_g: 0.01
+
+  loss:
+    balance_weights: [1]
+    ohem_thresh: 0.9
+    ohem_keep: 131072
+
+    alpha: 0.01
+    beta: 0.1
+
+  num_epochs: 484
+
+test:
+  pred_align_corners: False
+
+local_rank: -1
+cuda_devices: all

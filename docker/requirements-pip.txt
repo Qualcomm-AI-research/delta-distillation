@@ -1,0 +1,13 @@
+Pillow<7.0 # https://github.com/pytorch/vision/issues/1714
+PyYAML
+matplotlib
+fire==0.3.1
+tqdm
+scipy
+ffmpeg-python
+tensorboard>=1.12
+tensorboardX>=1.6
+numpy==1.18.3
+ptflops==0.6.2
+timm==0.6.12
+omegaconf==2.3.0

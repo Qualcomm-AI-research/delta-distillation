@@ -1,0 +1,26 @@
+# Copyright (c) 2023 Qualcomm Technologies, Inc.
+
+# All Rights Reserved.
+data:
+  type: frame
+  name: vid
+
+  frames:
+    vid: /deltadist/datasets/imagenet/ILSVRC2015/Data/VID
+    det: /deltadist/datasets/imagenet/ILSVRC2015/Data/DET
+
+  label:
+    train: /deltadist/datasets/imagenet/ILSVRC2015/Annotations/imagenet_vid_det_train.json
+    val: /deltadist/datasets/imagenet/ILSVRC2015/Annotations/imagenet_vid_val.json
+
+  num_classes: 30
+  exclude_DET_images: True # for finetuning the video model, you may not use the still images from ImageNet DET
+  dataset_sampling_rate: -1
+  num_frames_per_video: 15 #-1:all  15:original  50:half-half
+  frame_range: 9 # range from keyframe used for pairwise frame sampling
+  num_frames_test: 10
+
+  batch_size:
+    train: 4  # best when (num_frames * batch) is 16 in each gpu
+    val: 4
+  num_workers: 8

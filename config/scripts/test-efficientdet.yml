@@ -1,0 +1,15 @@
+# Copyright (c) 2023 Qualcomm Technologies, Inc.
+
+# All Rights Reserved.
+log:
+  results_dir: "exp"
+  frequency:
+    iteration: 10
+
+checkpoint:
+  init: null
+
+cuda_devices: all
+local_rank: 0
+
+stage: "test"

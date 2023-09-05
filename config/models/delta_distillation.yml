@@ -1,0 +1,9 @@
+# Copyright (c) 2023 Qualcomm Technologies, Inc.
+
+# All Rights Reserved.
+delta_distillation:
+  factor_ch: 4
+
+  channel_reduction_type: out
+
+  gate_bias_init: -1
