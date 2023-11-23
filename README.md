@@ -75,15 +75,12 @@ Similar to what we did with data, please prepare a checkpoint folder and store i
 Then, checkpoints can be downloaded and extracted as:
 
 ```
-TODO: Modify this with github links.
-wget --no-check-certificate -P $CHECKPOINT_PATH <link-to>checkpoints.zip.001
-wget --no-check-certificate -P $CHECKPOINT_PATH <link-to>checkpoints.zip.002
-wget --no-check-certificate -P $CHECKPOINT_PATH <link-to>checkpoints.zip.003
+wget --no-check-certificate -P $CHECKPOINT_PATH https://github.com/Qualcomm-AI-research/delta-distillation/releases/download/v1.0/delta-distillation-checkpoints-test.tar.gz
+wget --no-check-certificate -P $CHECKPOINT_PATH https://github.com/Qualcomm-AI-research/delta-distillation/releases/download/v1.0/delta-distillation-checkpoints-train.tar.gz
 cd $CHECKPOINT_PATH
 
-cat checkpoints.zip.* > checkpoints.zip
-zip -FF checkpoints.zip --out checkpoints-full.zip
-unzip checkpoints-full.zip
+tar zxvf delta-distillation-checkpoints-test.tar.gz
+tar zxvf delta-distillation-checkpoints-train.tar.gz
 ```
 
 Please make sure that you get the following structure:
